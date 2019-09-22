@@ -32,7 +32,7 @@ class School
 =end
   
   def sort
-    students_alphabetized = roster.collect {|grade, students| {grade => students.sort} }
+    students_alphabetized = roster.collect {|grade, students| {grade.sort => students.sort} }
     students_alphabetized
   end
 end
