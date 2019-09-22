@@ -1,6 +1,8 @@
 class School
   attr_accessor :name, :roster
   
+
+
   def initialize(name)
     @name = name
     @roster = {}
@@ -17,6 +19,10 @@ class School
 
   # this method should arrange the students in each grade by alphabetical order
   def sort
-    roster.collect {|k, v| k.sort, v.sort}
+    sorted = {}
+    roster.each do |grade, students|
+      sorted[grade] = students.sort
     end
+    sorted
+  end
 end
