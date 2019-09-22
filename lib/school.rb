@@ -21,10 +21,10 @@ class School
 
   # this method should arrange the students in each grade by alphabetical order
   def sort
-    sorted = {}
-    roster.each do |k, array_of_students|
-      sorted[k] = array_of_students.sort
+    students_sorted_by_grade_hash = {}
+    roster.each do |the_key_which_is_grade, the_array_of_students|
+      students_sorted_by_grade[the_key_which_is_grade] = the_array_of_students.sort
     end
-    sorted
+    students_sorted_by_grade_hash
   end
 end
