@@ -34,5 +34,5 @@ class School
   def sort
     r1 = roster.sort
     students_alphabetized = r1.map {|grade, students| {grade => students.sort} }
-    students_alphabetized.collect {|item, key_in_item| puts item[key_in_item]}
+    return students_alphabetized.each {|item, key_in_item| puts item[key_in_item]}
 end
