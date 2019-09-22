@@ -34,6 +34,6 @@ class School
   def sort
     r1 = roster.sort
     students_alphabetized = r1.map {|grade, students| {grade => students.sort} }
-    students_alphabetized.inspect
+    students_alphabetized.reduce
   end
 end
