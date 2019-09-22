@@ -34,10 +34,5 @@ class School
   def sort
     r1 = roster.sort
     students_alphabetized = r1.map {|grade, students| {grade => students.sort} }
-    students_alphabetized.each do |item, key_in_item|
-      probably_unnecessary_hash[item] = {}
-      probably_unnecessary_hash[item] << key_in_item
-      end
-    probably_unnecessary_hash
-  end
+    students_alphabetized.collect {|item, key_in_item| puts item[key_in_item]}
 end
