@@ -17,6 +17,6 @@ class School
 
   # this method should arrange the students in each grade by alphabetical order
   def sort
-    roster.collect {|k, v| }
+    roster.collect {|k, v| k.sort, v.sort}
     end
 end
