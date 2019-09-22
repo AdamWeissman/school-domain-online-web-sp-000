@@ -38,9 +38,10 @@ class School
   end
   
 =end
-
-
-  students_alphabetized.reduce({}) do |memo, obj|
+def sort
+    r1 = roster.sort
+    students_alphabetized = r1.map {|grade, students| {grade => students.sort} }
+    students_alphabetized.reduce({}) do |memo, obj|
     memo.merge(obj)
   end
   
