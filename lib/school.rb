@@ -29,13 +29,19 @@ class School
     end
     students_sorted_by_grade_hash
   end
-=end
   
   def sort
     r1 = roster.sort
     r2 = r1.map {|item| item[1].sort}
     #students_alphabetized = r1.map {|grade, students| {grade => students.sort} }
     r1.merge(r2)
+  end
+  
+=end
+
+
+  students_alphabetized.reduce({}) do |memo, obj|
+    memo.merge(obj)
   end
   
   
