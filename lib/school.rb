@@ -18,8 +18,8 @@ class School
   # this method should arrange the students in each grade by alphabetical order
   def sort
     sorted = {}
-    roster.each do |grade, students|
-      sorted[grade] = students.sort
+    roster.each do |item|
+      sorted = item.sort_by(key)
     end
     sorted
   end
