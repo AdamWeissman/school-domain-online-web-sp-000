@@ -23,7 +23,7 @@ class School
   def sort
     students_sorted_by_grade_hash = {}
     roster.each do |the_key_which_is_grade, the_array_of_students|
-      students_sorted_by_grade[the_key_which_is_grade] = the_array_of_students.sort
+      students_sorted_by_grade_hash[the_key_which_is_grade] = the_array_of_students.sort
     end
     students_sorted_by_grade_hash
   end
